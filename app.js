@@ -1,8 +1,23 @@
 $(document).ready(function(){
 	
+	//result = window.prompt(text, value); value is a string
+	var max = prompt("Please enter a number");{
+		max = Number(max)
+//these will change max from a string to an integer: 
+//+max or parseInt(max) or Math.floor(max) or 
+//Math.floor(parseFloat(max)) or max.valueOf()
 
-	var max =  prompt("Please enter a number", +"");{
-		fizzbuzzer(max);
+		if (max){
+			fizzbuzzer(max);
+		}
+		else{
+			//console.log('error');
+		alert('You have to enter a number (higher than 0)!');
+		//reload the page:
+		location.reload();
+		}
+
+		
     }
 	
 	function fizzbuzzer(max) {
